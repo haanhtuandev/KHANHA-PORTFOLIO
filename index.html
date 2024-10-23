@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khanh Ha</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-logo">
+                <p>KhanhHa</p>
+            </div>
+
+
+            <img class="mobile-nav" src="/assets/drop-down.svg">
+            </div>
+            
+        </div>
+       
+    </header>
+
+    <div class="section-container">
+        <section id="about" class="section">
+
+            <div class="about-text">
+                <h2>About me</h2>
+            <p>
+                I am a graduate student at the University of Washington, pursuing a Master's in Chemical Engineering with a focus on Data Science. My research and projects focus on leveraging machine learning to solve complex problems in biotechnology, healthcare, and diagnostics.
+            </p>
+            <a href="#">Get my resume</a>
+            </div>
+            
+            <img id="profile-picture" src="assets/profilepic2.webp">
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <p>Explore my research projects, ranging from breast cancer imaging segmentation to EEG analysis for TBI patients.</p>
+            <div>
+                <!-- Placeholder for project cards -->
+                <div>
+                    <h3>Breast Cancer Imaging Segmentation Using AI</h3>
+                    <p>Developed a deep learning model to accurately segment breast cancer tissue images, aiding in diagnosis and treatment planning.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div>
+                    <h3>EEG Data Analysis for TBI Patients</h3>
+                    <p>Applied machine learning algorithms to analyze EEG data from patients with traumatic brain injuries, aiming to assist in diagnosis.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div>
+                    <h3>Protein Engineering for Therapeutics</h3>
+                    <p>Utilized computational tools to model and engineer therapeutic proteins for medical applications.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="contact" class="section">
+            <h2>Contact!</h2>
+            <p>Interested in collaborating or offering a job opportunity? Get in touch through the form below or email me directly at <a href="bkha@uw.edu">bkha@uw.edu</a>.</p>
+            <img src="/assets/github.svg">
+            <img src="/assets/MdiLinkedin.svg">
+            <img>
+        </section>
+
+
+        <footer>
+            <p>© 2024 Khanh Ha. All rights reserved. | <a href="https://linkedin.com/in/khanhha456">LinkedIn</a> | <a href="https://github.com/khanhha456">GitHub</a></p>
+        </footer>
+
+
+
+
+    </div>
+
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+</body>
+</html>
